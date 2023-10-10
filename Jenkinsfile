@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'sudo rm -rf /var/www/html'
-                sh 'mkdir /var/www/html'
+                sh 'sudo mkdir /var/www/html'
                 sh 'cd /var/www/html'
                 sh 'wget https://wordpress.org/latest.zip'
                 
