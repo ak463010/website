@@ -19,11 +19,10 @@ pipeline {
                 sudo mv latest.zip /var/www/html
                 pwd
                 sudo apt install -y unzip
-                sudo unzip latest.zip
+                sudo unzip var/www/html/latest.zip
                 '
 
 
-            
             
                 
             }
