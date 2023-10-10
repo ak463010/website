@@ -14,8 +14,10 @@ pipeline {
                 echo 'Deploying....'
                 sh 'sudo rm -rf /var/www/html'
                 sh 'sudo mkdir /var/www/html'
-                sh 'cd /var/www/html'
-                sh 'sudo wget https://wordpress.org/latest.zip'
+                sh '
+                cd /var/www/html
+                sudo wget https://wordpress.org/latest.zip
+                '
                 
             }
         }
