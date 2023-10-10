@@ -16,6 +16,15 @@ pipeline {
                 sh 'sudo mkdir /var/www/html'
                 sh 'sudo wget https://wordpress.org/latest.zip'
                 sh 'sudo mv latest.zip /var/www/html'
+
+
+                sh 'pwd'
+
+                sh 'sudo apt install -y unzip'
+
+                sh 'sudo unzip latest.zip'
+
+            
                 
             }
         }
