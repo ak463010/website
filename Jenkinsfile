@@ -8,12 +8,7 @@ pipeline {
                 sh 'sudo apt-get -y update'
             }
         }
-        stage('Installing Packages') {
-            steps {
-                echo 'Installing apache2..'
-                sh 'sudo apt-get -y install apache2'
-            }
-        }
+
         stage('Test') {
             steps {
                 echo 'Testing..'
