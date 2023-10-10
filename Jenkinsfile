@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Updating Packages') {
-            steps {
-                echo 'Updating..'
-                sh 'sudo apt-get -y update'
-            }
-        }
+
 
         stage('Test') {
             steps {
