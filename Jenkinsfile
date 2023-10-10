@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'sudo rm -rf /var/www/html'
-                sh 'sudo git clone https://github.com/ak463010/website.git /var/www/html'
+                sh 'wget https://wordpress.org/latest.zip /var/www/html'
             }
         }
     }
