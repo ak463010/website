@@ -15,7 +15,7 @@ pipeline {
                 sh 'sudo rm -rf /var/www/html'
                 sh 'sudo mkdir /var/www/html'
                 sh 'cd /var/www/html'
-                sh 'wget https://wordpress.org/latest.zip'
+                sh 'sudo wget https://wordpress.org/latest.zip'
                 
             }
         }
