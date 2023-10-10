@@ -15,15 +15,15 @@ pipeline {
                 sh 'sudo rm -rf /var/www/html'
                 sh 'sudo mkdir /var/www/html'
                 sh 'sudo wget https://wordpress.org/latest.zip'
-                sh 'sudo mv latest.zip /var/www/html'
+                sh '
+                sudo mv latest.zip /var/www/html
+                pwd
+                sudo apt install -y unzip
+                sudo unzip latest.zip
+                '
 
 
-                sh 'pwd'
-
-                sh 'sudo apt install -y unzip'
-
-                sh 'sudo unzip latest.zip'
-
+            
             
                 
             }
