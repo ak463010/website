@@ -28,25 +28,15 @@ pipeline {
             }
         }
 
-        stage('Mv latest/* into /var/www/html/') {
-            steps {
-                sh 'sudo mv wordpress/* /var/www/html/'
-            }
-        }
-
-      
-
-
-
-        
-        
         stage('Deploy') {
             steps {
                 sh 'sudo rm -rf /var/www/html'
                 sh 'sudo mkdir /var/www/html'
-                sh 'sudo mv * /var/www/html/'
+                sh 'sudo mv wordpress/* /var/www/html/'
             }
         }
+
+    
 
         stage('Cleanup') {
             steps {
