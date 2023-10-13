@@ -5,7 +5,7 @@ pipeline {
 
         stage('Git Checkout') {
             steps {
-                git clone 'https://github.com/ak463010/website.git'
+                git url: 'https://github.com/ak463010/website.git', branch: 'main'
             }
         }
 
