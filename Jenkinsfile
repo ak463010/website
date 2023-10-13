@@ -3,23 +3,28 @@ pipeline {
 
     stages {
 
-        stage('Test') {
+        stage('Git Checkout') {
             steps {
-                echo 'Testing..'
+                git clone 'https://github.com/ak463010/website.git'
             }
         }
+
+        stage('System Update and Upgrade') {
+            steps {
+                sh 'sudo apt-get -y update'
+            }
+            steps {
+                sh 'sudo apt-get -y upgrade'
+            }
+        }
+
+        
         
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
                 sh 'sudo rm -rf /var/www/html'
                 sh 'sudo mkdir /var/www/html'
-                sh 'sudo wget https://wordpress.org/latest.zip'
-                sh 'sudo mv latest.zip /var/www/html'
-                sh 'sudo pwd'
-                sh 'sudo apt install -y unzip'
-                sh 'sudo unzip /var/www/html/latest.zip -d /var/www/html/'
-                sh 'sudo mv /var/www/html/wordpress/* /var/www/html/' 
+                sh 'sudo mv website/* /var/www/html/'
             }
         }
     }
