@@ -3,14 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Git Checkout') {
-            steps {
-                git url: 'https://github.com/ak463010/blueservice.github.io.git', branch: 'main'
-            }
-        }
-
-      
-
         stage('System update') {
             steps{
 
@@ -23,6 +15,30 @@ pipeline {
                 sh 'sudo apt-get install -y apache2'
             }
         }
+
+        stage('Git wordpress') {
+            steps {
+                sh 'wget https://wordpress.org/latest.zip'
+            }
+        }
+
+        stage('Unzip wordpress') {
+            steps {
+                sh 'wget https://wordpress.org/latest.zip'
+            }
+        }
+
+        stage('Mv latest/* into /var/www/html/') {
+            steps {
+                sh 'sudo mv wordpress/* /var/www/html/'
+            }
+        }
+
+      
+
+
+
+        
         
         stage('Deploy') {
             steps {
