@@ -15,9 +15,10 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh 'sudo rm -rf /var/www/html'
-                sh 'sudo mkdir /var/www/html'
-                sh 'sudo mv website/* /var/www/html/'
+                sh 'ls'
+                // sh 'sudo rm -rf /var/www/html'
+                // sh 'sudo mkdir /var/www/html'
+                // sh 'sudo mv website/* /var/www/html/'
             }
         }
 
