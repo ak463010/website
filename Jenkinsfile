@@ -3,11 +3,11 @@ pipeline {
 
     stages {
 
-        // stage('Git Checkout') {
-        //     steps {
-        //         git url: 'https://github.com/ak463010/website.git', branch: 'main'
-        //     }
-        // }
+        stage('Git Checkout') {
+            steps {
+                git url: 'https://github.com/ak463010/blueservice.github.io.git', branch: 'main'
+            }
+        }
 
       
 
