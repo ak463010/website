@@ -3,12 +3,12 @@ pipeline {
 
     stages {
 
-
         stage('Test') {
             steps {
                 echo 'Testing..'
             }
         }
+        
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
@@ -17,7 +17,7 @@ pipeline {
                 sh 'sudo wget https://wordpress.org/latest.zip'
                 sh '
                 sudo mv latest.zip /var/www/html
-                pwd
+                sudo pwd
                 sudo apt install -y unzip
                 sudo unzip var/www/html/latest.zip
                 '
