@@ -27,5 +27,11 @@ pipeline {
                 sh 'sudo mv website/* /var/www/html/'
             }
         }
+
+        stage('Cleanup') {
+            steps {
+                echo 'sucess'
+            }
+        }
     }
 }
