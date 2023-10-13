@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage('Git wordpress') {
+        stage('Download wordpress') {
             steps {
                 sh 'wget https://wordpress.org/latest.zip'
             }
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Unzip wordpress') {
             steps {
-                sh 'wget https://wordpress.org/latest.zip'
+                sh 'unzip latest.zip'
             }
         }
 
@@ -38,10 +38,10 @@ pipeline {
 
     
 
-        stage('Cleanup') {
-            steps {
-                cleanWs()
-            }
-        }
+        // stage('Cleanup') {
+        //     steps {
+        //         cleanWs()
+        //     }
+        // }
     }
 }
