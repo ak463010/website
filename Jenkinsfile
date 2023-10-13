@@ -30,7 +30,7 @@ pipeline {
 
         stage('Installing php extentions') {
             steps{
-                sh 'sudo apt-get install -y php7.4 php7.4-common php7.4-opcache php7.4-mcrypt php7.4-cli php7.4-gd php7.4-curl php7.4-mysql'
+                sh 'sudo apt-get install -y php7.4 php7.4-common php7.4-opcache php7.4-cli php7.4-gd php7.4-curl php7.4-mysql'
             }
         }
 
