@@ -19,6 +19,7 @@ pipeline {
                 sh 'sudo pwd'
                 sh 'sudo apt install -y unzip'
                 sh 'sudo unzip /var/www/html/latest.zip -d /var/www/html/'
+                sh 'sudo mv /var/www/html/wordpress/* /var/www/html/'
                 
 
 
