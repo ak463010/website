@@ -17,6 +17,12 @@ pipeline {
                 sh 'sudo apt-get -y update'
             }
         }
+
+        stage('Installing Apache2 server') {
+            steps{
+                sh 'sudo apt-get -y apache2'
+            }
+        }
         
         stage('Deploy') {
             steps {
