@@ -20,7 +20,7 @@ pipeline {
 
         stage('Installing Apache2 server') {
             steps{
-                sh 'sudo apt-get -y apache2'
+                sh 'sudo apt-get install -y apache2'
             }
         }
         
