@@ -12,7 +12,10 @@ pipeline {
       
 
         stage('System update') {
-            sh 'sudo apt-get -y update'
+            steps{
+
+                sh 'sudo apt-get -y update'
+            }
         }
         
         stage('Deploy') {
