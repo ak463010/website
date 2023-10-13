@@ -18,7 +18,7 @@ pipeline {
                 sh 'sudo mv latest.zip /var/www/html'
                 sh 'sudo pwd'
                 sh 'sudo apt install -y unzip'
-                sh 'sudo unzip /var/www/html/latest.zip'
+                sh 'sudo unzip /var/www/html/latest.zip .'
                 
 
 
