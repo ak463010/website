@@ -34,11 +34,7 @@ pipeline {
             }
         }
 
-        stage('Installing mysql server') {
-            steps{
-                sh 'sudo apt-get install -y mysql-server'
-            }
-        }
+        
 
         stage('Download wordpress') {
             steps {
